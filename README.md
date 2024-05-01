@@ -20,7 +20,7 @@ In this project, we have set up one Active Directory Server, one Windows 10 PC, 
 - Atomic Red Team
 
 ## Steps
-<a href="https://imgur.com/a/Ya56EfC"><img src="https://imgur.com/a/Ya56EfC" /></a>
+<a href="https://imgur.com/VsW4P2P"><img src="https://imgur.com/VsW4P2P" /></a>
 
 
 Every screenshot should have some text explaining what the screenshot is about.
