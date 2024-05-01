@@ -4,6 +4,8 @@
 
 In this project, we have set up one Active Directory Server, one Windows 10 PC, a Kali Linux that simulates an attacker, and a Splunk server running on Ubuntu. 
 
+The project is based on <a href="https://www.youtube.com/@MyDFIR"> @MyDFIR </a> Active Directory Project (Home Lab).
+
 ### Skills Learned
 
 - Basic introduction to Splunk
@@ -24,8 +26,6 @@ In this project, we have set up one Active Directory Server, one Windows 10 PC, 
 
 *Ref 1: Network Diagram*
 
-Every screenshot should have some text explaining what the screenshot is about.
-
-Example below.
+All four VMs are in the same 192.168.100/24 network.  
 
 
