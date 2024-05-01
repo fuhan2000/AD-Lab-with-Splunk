@@ -20,11 +20,12 @@ In this project, we have set up one Active Directory Server, one Windows 10 PC, 
 - Atomic Red Team
 
 ## Steps
-<blockquote class="imgur-embed-pub" lang="en" data-id="VsW4P2P"><a href="https://imgur.com/VsW4P2P">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![image](https://imgur.com/VsW4P2P.jpg)
 
+*Ref 1: Network Diagram*
 
 Every screenshot should have some text explaining what the screenshot is about.
 
 Example below.
 
-*Ref 1: Network Diagram*
+
