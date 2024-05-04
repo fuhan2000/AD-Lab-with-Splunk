@@ -102,7 +102,8 @@ If you have configured everything correctly, Splunk should see two hosts.
 ### Using Crowbar against Windows 10's RDP
 
 <img src="https://i.imgur.com/irUZGg5.jpg" width="400" />
-* Ref 9: Attacker's password.txt * 
+
+*Ref 9: Attacker's password.txt* 
 
 
 
