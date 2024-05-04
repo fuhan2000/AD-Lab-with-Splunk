@@ -71,16 +71,38 @@ It is ok to set the Ubuntu (Splunk) server to use UTC.
 
 I decided to use Singapore timezone for Kali.
 
-### Splunk Install
+### VMs IP address
 
-<img src="https://i.imgur.com/YoWQkfz.jpg" width="400" />
+Follow @MyDFIR's youtube instructions at 
+- Active Directory Project (Home Lab) | Part 3 for Ubuntu and Windows 10
+- Active Directory Project (Home Lab) | Part 4 for AD Server
+- Active Directory Project (Home Lab) | Part 5 for Kali Linux
 
-*Ref 8: Download the deb package*
+### Sysmon
 
-Download the deb package and install it on the Ubuntu server.
+Follow @MyDFIR's youtube instructions at Active Directory Project (Home Lab) | Part 3.
 
-Start from 12:36 AD Project Part 3
+He uses a sysmon config from https://github.com/olafhartong/sysmon-modular Olaf Hartong.
 
+### Splunk
+
+Follow @MyDFIR's youtube instructions at 
+- Active Directory Project (Home Lab) | Part 3 for Ubuntu, Windows 10, AD Server
+
+Splunk Enterprise will be installed at Ubuntu.
+
+Splunk Universal Forwarder will be installed at Windows 10 and AD Server.
+
+<img src="https://i.imgur.com/k4yqRMi.png" width="400" />
+
+*Ref 8: Two hosts visible to Splunk* 
+
+If you have configured everything correctly, Splunk should see two hosts.
+
+### Using Crowbar against Windows 10's RDP
+
+<img src="https://i.imgur.com/irUZGg5.jpg" width="400" />
+* Ref 9: Attacker's password.txt * 
 
 
 
