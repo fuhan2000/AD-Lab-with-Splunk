@@ -150,6 +150,16 @@ Follow @MyDFIR's youtube instructions at Active Directory Project (Home Lab) | P
 
 If successful, you will see C:\AtomicRedTeam directory.
 
+The following commands will come in useful before Invoke-AtomicTest:
+
+More details at <a href="https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Invoke-AtomicRedTeam">Install-Invoke-AtomicRedTeam</a>:
+
+Set-ExecutionPolicy Bypass CurrentUser;
+
+IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
+
+Install-AtomicRedTeam -getAtomics -Force
+
 ### Mitre Att&ck T1136.001
 
 <img src="https://i.imgur.com/9h3KGJy.jpg" width="400" />
