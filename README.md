@@ -82,7 +82,7 @@ Follow @MyDFIR's youtube instructions at
 
 Follow @MyDFIR's youtube instructions at Active Directory Project (Home Lab) | Part 3.
 
-He uses a sysmon config from <a href="https://github.com/olafhartong/sysmon-modular"> Olaf Hartong's github </a>
+He uses a sysmon config from Olaf Hartong's <a href="https://github.com/olafhartong/sysmon-modular">github</a>.
 
 ### Splunk
 
@@ -174,3 +174,14 @@ Notice that NewLocalUser is created.
 
 With index=endpoint host="TARGET-PC" NewLocaluser, T1136.001's telemetry can be detected. 
 
+### Mitre Att&ck T1059.001
+
+<img src="https://i.imgur.com/OJbYfoA.jpg" width="400" />
+
+*Ref 20: T1059.001 Powershell*
+
+<img src="https://i.imgur.com/gY4RN5K.jpg" width="400" />
+
+*Ref 21: Atomic Red Team T1059.001*
+
+Start from 16:10 Part 5
