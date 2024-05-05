@@ -84,7 +84,7 @@ Setting the Ubuntu (Splunk) server to use UTC is okay.
 
 *Ref 7: Kali Timezone*
 
-I decided to use Singapore timezone for Kali.
+I decided to use the Singapore timezone for Kali.
 
 ### VMs IP address
 
