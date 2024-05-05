@@ -158,9 +158,7 @@ Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s youtube instructi
 
 If successful, you will see C:\AtomicRedTeam directory.
 
-The following commands will come in useful before Invoke-AtomicTest:
-
-More details at <a href="https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Invoke-AtomicRedTeam">Install-Invoke-AtomicRedTeam</a>:
+The following commands will come in useful before running Invoke-AtomicTest (More details at <a href="https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Invoke-AtomicRedTeam">Install-Invoke-AtomicRedTeam</a>):
 
 *Set-ExecutionPolicy Bypass CurrentUser;*
 
