@@ -77,7 +77,7 @@ As I am located in Singapore, these are my settings:
 
 *Ref 6: Ubuntu Timezone*
 
-It is ok to set the Ubuntu (Splunk) server to use UTC.
+Setting the Ubuntu (Splunk) server to use UTC is okay.
 
 <img src="https://i.imgur.com/oNRhNdY.jpg" width="200" />
 
