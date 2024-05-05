@@ -27,8 +27,9 @@ Each VM has access to the internet.
 The attacker, positioned at Kali Linux (192.168.100.250), represents a potential threat to the network's security.
 
 The AD Server and Windows 10 will have:
-- Splunk Universal Forwarder
-- Sysmon
+
+Splunk Universal Forwarder
+Sysmon
 
 Splunk Server will be at 192.168.100.10 and will run on Ubuntu.
 
@@ -87,20 +88,20 @@ I decided to use Singapore timezone for Kali.
 
 ### VMs IP address
 
-Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s Youtube instructions at 
+Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s YouTube instructions at 
 - Active Directory Project (Home Lab) | Part 3 for Ubuntu and Windows 10
 - Active Directory Project (Home Lab) | Part 4 for AD Server
 - Active Directory Project (Home Lab) | Part 5 for Kali Linux
 
 ### Sysmon
 
-Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s Youtube instructions at Active Directory Project (Home Lab) | Part 3.
+Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s YouTube instructions at Active Directory Project (Home Lab) | Part 3.
 
 He uses a sysmon config from Olaf Hartong's <a href="https://github.com/olafhartong/sysmon-modular">Github</a>.
 
 ### Splunk
 
-Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s Youtube instructions at 
+Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s YouTube instructions at 
 - Active Directory Project (Home Lab) | Part 3 for Ubuntu, Windows 10, AD Server
 
 Splunk Enterprise will be installed at Ubuntu.
@@ -160,7 +161,7 @@ To install Atomic RedTeam on Windows 10, follow <a href="https://www.youtube.com
 
 <img src="https://i.imgur.com/Bvkxpq1.jpg" width="400" />
 
-*Ref 15: Atomic Red Team successful install*
+*Ref 15: Atomic Red Team successfully install*
 
 If successful, you will see C:\AtomicRedTeam directory.
 
@@ -186,7 +187,7 @@ The Atomic Red Team T1136.001 simulates an adversary creating a local account.
 
 <img src="https://i.imgur.com/sQQRotl.jpg" width="400" />
 
-*Ref 18: Simulating Local Account Account creation through Atomic Red Team T1136.001*
+*Ref 18: Simulating Local Account creation through Atomic Red Team T1136.001*
 
 Notice that NewLocalUser is created.
 
