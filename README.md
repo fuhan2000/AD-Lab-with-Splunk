@@ -87,7 +87,7 @@ I decided to use Singapore timezone for Kali.
 
 ### VMs IP address
 
-Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s youtube instructions at 
+Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s Youtube instructions at 
 - Active Directory Project (Home Lab) | Part 3 for Ubuntu and Windows 10
 - Active Directory Project (Home Lab) | Part 4 for AD Server
 - Active Directory Project (Home Lab) | Part 5 for Kali Linux
