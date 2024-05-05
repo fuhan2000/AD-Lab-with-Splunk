@@ -1,33 +1,41 @@
 # AD-Lab-with-Splunk
 
 ## Objective
+In this project, we have set up one Active Directory Server, one Windows 10 PC, a Kali Linux that simulates an attacker, and a Splunk server running on Ubuntu.
 
-In this project, we have set up one Active Directory Server, one Windows 10 PC, a Kali Linux that simulates an attacker, and a Splunk server running on Ubuntu. 
-
-The project is based on <a href="https://www.youtube.com/@MyDFIR"> @MyDFIR </a> Active Directory Project (Home Lab).
-
-### Skills Learned
-
-- Basic introduction to Splunk
-- Basic introduction to Active Directory
-- Basic introduction to Kali Linux and Ubuntu
-- Basic intruduction to crowbar, Windows Event Code
-- Basic introduction to Atomic Red Team and MITRE ATT&CK framework
+The project is based on the <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a> Active Directory Project (Home Lab).
 
 ### Tools Used
+- VirtualBox
+- Sysmon
 - Splunk
 - Active Directory
 - Kali Linux's crowbar
 - Ubuntu
 - Atomic Red Team
+- Mitre Att&ck
 
-## Network Diagram
+### Network Diagram
 <img src="https://imgur.com/VsW4P2P.jpg" width="400" />
 
 *Ref 1: Network Diagram*
 
-All four VMs are in the same 192.168.100/24 network and are hosted in Virtualbox.  
+All four VMs are in the same 192.168.100/24 network and are hosted in Virtualbox.
 
+Each VM has access to the internet.
+
+The attacker will be at Kali Linux (192.168.100.250).
+
+The AD Server and Windows 10 will have:
+- Splunk Universal Forwarder
+- Sysmon
+
+Splunk Server will be at 192.168.100.10 and will run on Ubuntu. 
+
+### Summary of Findings
+
+
+## Lab Details
 ### Virtualbox NAT Network Settings
 
 
@@ -73,20 +81,20 @@ I decided to use Singapore timezone for Kali.
 
 ### VMs IP address
 
-Follow @MyDFIR's youtube instructions at 
+Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s youtube instructions at 
 - Active Directory Project (Home Lab) | Part 3 for Ubuntu and Windows 10
 - Active Directory Project (Home Lab) | Part 4 for AD Server
 - Active Directory Project (Home Lab) | Part 5 for Kali Linux
 
 ### Sysmon
 
-Follow @MyDFIR's youtube instructions at Active Directory Project (Home Lab) | Part 3.
+Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s youtube instructions at Active Directory Project (Home Lab) | Part 3.
 
 He uses a sysmon config from Olaf Hartong's <a href="https://github.com/olafhartong/sysmon-modular">github</a>.
 
 ### Splunk
 
-Follow @MyDFIR's youtube instructions at 
+Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s youtube instructions at 
 - Active Directory Project (Home Lab) | Part 3 for Ubuntu, Windows 10, AD Server
 
 Splunk Enterprise will be installed at Ubuntu.
@@ -142,7 +150,7 @@ If you were to use index=endpoint tsmith EventCode=4625 and scroll down, you wil
 
 ### Atomic Red Team
 
-Follow @MyDFIR's youtube instructions at Active Directory Project (Home Lab) | Part 5 to install Atomic RedTeam on Windows 10.
+Follow <a href="https://www.youtube.com/@MyDFIR">@MyDFIR</a>'s youtube instructions at Active Directory Project (Home Lab) | Part 5 to install Atomic RedTeam on Windows 10.
 
 <img src="https://i.imgur.com/Bvkxpq1.jpg" width="400" />
 
@@ -154,11 +162,11 @@ The following commands will come in useful before Invoke-AtomicTest:
 
 More details at <a href="https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Invoke-AtomicRedTeam">Install-Invoke-AtomicRedTeam</a>:
 
-Set-ExecutionPolicy Bypass CurrentUser;
+*Set-ExecutionPolicy Bypass CurrentUser;*
 
-IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
+*IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);*
 
-Install-AtomicRedTeam -getAtomics -Force
+*Install-AtomicRedTeam -getAtomics -Force*
 
 ### Mitre Att&ck T1136.001
 
@@ -170,7 +178,7 @@ Install-AtomicRedTeam -getAtomics -Force
 
 *Ref 17: Atomic Red Team T1136.001*
 
-The Atomic Red Team T1136.001 is used to simulate a local account creation.
+The Atomic Red Team T1136.001 is used to simulate an adversary creating a local account.
 
 <img src="https://i.imgur.com/sQQRotl.jpg" width="400" />
 
@@ -194,4 +202,23 @@ With index=endpoint host="TARGET-PC" NewLocaluser, T1136.001's telemetry can be 
 
 *Ref 21: Atomic Red Team T1059.001*
 
-Start from 16:10 Part 5
+The T1059.001 is to detect adversary abusing Powershell commands and scripts. 
+
+<img src="https://i.imgur.com/iluwP5E.jpg" width="400" />
+
+*Ref 22: Invoke-Atomic Test T1059.001*
+
+Running the T1059.001. Notice that Microsoft Defender detects threats. 
+
+<img src="https://i.imgur.com/EGOmz40.jpg" width="400" />
+
+*Ref 23: Powershell with -noprofile flag*
+
+A powershell command was executed with -noprofile flag.
+
+<img src="https://i.imgur.com/CjGFfeX.jpeg" width="400" />
+
+*Ref 24: Detecting the Powershell -noprofile*
+
+Splunk can detect the powershell -noprofile with index=endpoint host="TARGET-PC" powershell noprofile.
+
